@@ -1,0 +1,23 @@
+<fieldset>
+  <legend>{{ text_title }}</legend>
+<form id="form-credit-card">    
+<div id="paymennt-frame" class="card-frame"></div>
+    <p class="info-message"></p>
+    <p class="error-message"></p>
+    <input type="hidden" name="pkey" id="pkey" value="{{public_key}}">
+    <input type="hidden" name="pptoken" id="pptoken" value="">
+    <input type="hidden" name="pmode" id="pmode" value="{{mode}}">
+    <div class="text-end">
+      <button type="submit" id="button-confirm" class="btn btn-primary">{{ button_confirm }}</button>
+    </div>
+  </form>
+</fieldset>
+<script type="text/javascript"><!--
+$(document).ready(function(){
+  setTimeout(function(){
+    if(document.getElementById('paymennt-frame').innerHTML  == '') {
+      window.location.reload();
+    }
+  },500); 
+});
+//--></script>
